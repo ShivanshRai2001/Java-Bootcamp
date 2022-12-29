@@ -6,5 +6,9 @@ public class Practice1{
         System.out.print("Enter the number : ");
         int num = input.nextInt();
         System.out.println("Entered number is : " + num);
+
+        System.out.print("Enter the string : ");
+        String name = input.nextLine();
+        System.out.println("The entered string is : " + name);
     }
 }
