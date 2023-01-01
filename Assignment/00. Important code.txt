@@ -1,2 +1,3 @@
 Important code : 
 4   - HCF and LCM code
+5   - Input until char entered
