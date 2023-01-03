@@ -3,3 +3,5 @@ Important code :
 5   - Input until char entered
 9   - Calculator
 12  - Fibonacci Series
+13  - Palindrome
+14  - Armstrong
