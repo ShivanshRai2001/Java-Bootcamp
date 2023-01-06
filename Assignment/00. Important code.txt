@@ -5,5 +5,5 @@ Important code :
 12  - Fibonacci Series
 13  - Palindrome
 14  - Armstrong
-16  - Subtract the Product and Sum of Digits of an Integer
+16  - Subtract the Product and Sum of Digits of an Integer.
 31  - nCr and nPr + Factorial
