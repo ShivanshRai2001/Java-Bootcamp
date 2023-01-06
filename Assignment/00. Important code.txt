@@ -1,6 +1,6 @@
 Important code : 
 4   - HCF and LCM code
-5   - Input until char entered
+5   - Input until char x entered
 9   - Calculator
 12  - Fibonacci Series
 13  - Palindrome
