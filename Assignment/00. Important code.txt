@@ -10,3 +10,9 @@ Important code :
 32  - Reverse String
 36  - Number of even days
 37  - Different types of sum
+
+
+
+
+
+** Changes in code **
