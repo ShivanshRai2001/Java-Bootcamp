@@ -1,4 +1,4 @@
-Important code : 
+                                        ** Important code **
 4   - HCF and LCM code
 5   - Input until char x entered
 9   - Calculator
@@ -15,4 +15,4 @@ Important code :
 
 
 
-** Changes in code **
+                                        ** Changes in code **
