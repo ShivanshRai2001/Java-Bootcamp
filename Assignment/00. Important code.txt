@@ -8,3 +8,4 @@ Important code :
 16  - Subtract the Product and Sum of Digits of an Integer.
 31  - nCr and nPr + Factorial
 32  - Reverse String
+37  - Different types of sum
