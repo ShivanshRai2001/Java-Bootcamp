@@ -27,5 +27,16 @@ public class Practice2 {
             default:
                 System.out.println("Enter the valid fruit.");
         }
+        
+        // we can write similar thing like thia also 
+            case "Mango" -> System.out.println("The king of fruits.");
+            
+            case "Apple" -> System.out.println("Sweet red fruit.");
+
+            case "Orange" -> System.out.println("The round fruit.");
+
+            case "Grapes" -> System.out.println("The small fruit.");
+
+            default -> System.out.println("Enter the valid fruit.");
     }
 }
