@@ -40,3 +40,17 @@ public class Practice2 {
         return sum;
     }
 }
+
+
+// Pass the value of no. when we are calling the method in main()
+public class Practice2 {
+    public static void main(String[] args) {
+        int ans = sum(20, 30);
+        System.out.println("The sum of the number is : " + ans);
+    }
+
+    static int sum(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+}
