@@ -23,3 +23,24 @@ public class Practice2 {
         return message;
     }
 }
+
+
+// using Scanner in this 
+import java.util.Scanner;
+
+public class Practice2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter the name : ");
+        String name = input.next();
+
+        String personal_message = greet(name);
+        System.out.println(personal_message);
+    }
+
+    static String greet(String name) {
+        String message = "Hello " + name;
+        return message;
+    }
+}
