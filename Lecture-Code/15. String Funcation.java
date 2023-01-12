@@ -10,3 +10,16 @@ public class Practice2 {
     }
 }
 
+
+// Passing variable
+public class Practice2 {
+    public static void main(String[] args) {
+        String personal_message = greet("Rahul");
+        System.out.println(personal_message);
+    }
+
+    static String greet(String name) {
+        String message = "Hello " + name;
+        return message;
+    }
+}
