@@ -10,7 +10,8 @@
 32  - Reverse String
 36  - Number of even days
 37  - Different types of sum
-45  - Factorial
+39  - Odd Even Functions
+45  - Factorial Funcations
 
 
 
