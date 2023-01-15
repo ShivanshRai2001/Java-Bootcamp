@@ -8,7 +8,7 @@ public class Practice2 {
         int num = input.nextInt();
         int fac = 1;
         int ans = factorial(fac, num);
-        System.out.println(ans);
+        System.out.println("The factorial is - " + ans);
     }
 
     static int factorial(int fac, int num) {
