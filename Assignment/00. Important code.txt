@@ -12,7 +12,7 @@
 37  - Different types of sum
 39  - Odd Even Functions
 45  - Factorial Funcations
-
+60  - Armstrong Funcations
 
 
 
