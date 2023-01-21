@@ -13,7 +13,7 @@
 39  - Odd Even Functions
 45  - Factorial Funcations
 60  - Armstrong Funcations
-
+62  - Subtract the Product and Sum of Digits of an Integer Func
 
 
 
