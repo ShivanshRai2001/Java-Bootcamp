@@ -15,7 +15,7 @@
 60  - Armstrong Funcations
 62  - Subtract the Product and Sum of Digits of an Integer Func
 79  - Reverse String Func
-
+86  - Prime Number Func
 
 
                                         ** Changes in code **
