@@ -5,6 +5,8 @@ public class Practice2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        // Array of primitives
+
         // array declaration
         int[] arr = new int[5];
 
@@ -26,5 +28,21 @@ public class Practice2 {
 
         // Simplest way to print 
         System.out.print(Arrays.toString(arr));
+
+        // Array of objects
+        String[] str = new String[3];
+
+        for(int i=0; i<str.length; i++) {
+            System.out.print("Enter the " + i + " string : ");
+            str[i] = input.next();
+        }
+
+        System.out.println("\nThe entered strings are :- ");
+        for(int i=0; i<str.length; i++) {
+            System.out.println("The " + i + " string is : " + str[i]);
+        }
+
+        // Simplest way to print 
+        System.out.print(Arrays.toString(str));
     }
 }
