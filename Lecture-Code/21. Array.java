@@ -15,7 +15,7 @@ public class Practice2 {
             arr[i] = input.nextInt();
         }
 
-        System.out.println("\nThe entered elements are :- ");
+        // System.out.println("\nThe entered elements are :- ");
         for(int i=0; i<arr.length; i++) {
             System.out.println("The " + i + " element is : " + arr[i]);
         }
@@ -29,6 +29,10 @@ public class Practice2 {
         // Simplest way to print 
         System.out.print(Arrays.toString(arr));
 
+        // To modify the value
+        arr[0] = 99;
+        System.out.print(Arrays.toString(arr));
+
         // Array of objects
         String[] str = new String[3];
 
@@ -37,12 +41,16 @@ public class Practice2 {
             str[i] = input.next();
         }
 
-        System.out.println("\nThe entered strings are :- ");
+        // System.out.println("\nThe entered strings are :- ");
         for(int i=0; i<str.length; i++) {
             System.out.println("The " + i + " string is : " + str[i]);
         }
 
         // Simplest way to print 
+        System.out.print(Arrays.toString(str));
+
+        // To modify the value
+        str[0] = "ssss";
         System.out.print(Arrays.toString(str));
     }
 }
