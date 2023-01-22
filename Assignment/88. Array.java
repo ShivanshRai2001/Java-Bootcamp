@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practice2 {
@@ -16,5 +17,14 @@ public class Practice2 {
         for(int i=0; i<arr.length; i++) {
             System.out.println("The " + i + " element is : " + arr[i]);
         }
+
+        // Enhaced for loop
+        System.out.println("");
+        for(int num : arr) { // For every element in the array, print the element
+            System.out.println("The element is : " + num); // here num represents element of the array
+        }
+
+        // Simplest way to print 
+        System.out.print(Arrays.toString(arr));
     }
 }
