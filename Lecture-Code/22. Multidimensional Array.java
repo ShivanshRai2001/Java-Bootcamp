@@ -27,11 +27,15 @@ public class Practice2 {
         // In matrix format
         System.out.println("In matrix form :- ");
         for(int row=0; row<arr.length; row++) {
-            System.out.print("[ ");
             for(int col=0; col<arr[row].length; col++) {
-                System.out.print(arr[row][col] + ", ");
+                System.out.print(arr[row][col] + " ");
             }
-            System.out.println("]");
+            System.out.println();
+        }
+
+        // Simplest form
+        for(int row=0; row<arr.length; row++) {
+            System.out.println(Arrays.toString(arr[row]));
         }
     }
 }
