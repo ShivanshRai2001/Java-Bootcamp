@@ -37,5 +37,9 @@ public class Practice2 {
         for(int row=0; row<arr.length; row++) {
             System.out.println(Arrays.toString(arr[row]));
         }
+        // or
+        for(int[] a : arr) {
+            System.out.println(Arrays.toString(a));
+        }
     }
 }
