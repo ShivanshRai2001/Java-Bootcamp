@@ -6,6 +6,7 @@
 13  - Palindrome
 14  - Armstrong
 16  - Subtract the Product and Sum of Digits of an Integer.
+17  - Factors
 31  - nCr and nPr + Factorial
 32  - Reverse String
 36  - Number of even days

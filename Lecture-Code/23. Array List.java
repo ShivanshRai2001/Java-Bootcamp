@@ -37,3 +37,5 @@ public class Practice2 {
         }
     }
 }
+
+>>>>>>> e484c74af616bd190ea14bd912d658ff86af672b
