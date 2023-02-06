@@ -20,3 +20,24 @@ public class Practice2 {
         System.out.println("The second largest element is : " + arr[1]);
     }
 }
+
+
+// Simple way
+import java.util.Arrays;
+
+public class Practice2 {
+    public static void main(String[] args) {
+        int[] arr = {2, 5, 7, 6, 8};
+
+        System.out.println("Original Array : " + Arrays.toString(arr));
+
+        Arrays.sort(arr);
+
+        int index = arr.length - 1;
+
+        while(arr[index] == arr[arr.length - 1]) {
+            index--; 
+        }
+        System.out.println("Second largest value: " + arr[index]);
+    }
+}
