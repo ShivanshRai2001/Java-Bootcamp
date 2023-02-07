@@ -10,5 +10,9 @@ public class Practice2 {
 
         list.add("HTML");
         System.out.println(list);
+
+        // From ArrayList to Array
+        list.toArray(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
