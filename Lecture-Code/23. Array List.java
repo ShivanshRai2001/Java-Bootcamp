@@ -5,7 +5,7 @@ public class Practice2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        ArrayList<Integer> list = new ArrayList<Integer>(10);
+        ArrayList<Integer> list = new ArrayList<Integer>(10); // It helps to create the array of not predefined list.
 
         list.add(32);
         list.add(3231);
