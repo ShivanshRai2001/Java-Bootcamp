@@ -18,6 +18,7 @@
 79  - Reverse String Func
 86  - Prime Number Func
 99.6  - Determine Whether Matrix Can Be Obtained By Rotation
+99.8  - Find N Unique Integers Sum up to Zero
 
 
                                         ** Changes in code **
