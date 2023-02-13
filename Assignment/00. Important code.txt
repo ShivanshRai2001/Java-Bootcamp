@@ -17,6 +17,7 @@
 62  - Subtract the Product and Sum of Digits of an Integer Func
 79  - Reverse String Func
 86  - Prime Number Func
+99.6  - Determine Whether Matrix Can Be Obtained By Rotation
 
 
                                         ** Changes in code **
