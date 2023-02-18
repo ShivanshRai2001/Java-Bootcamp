@@ -6,8 +6,11 @@ public class Practice2 {
     }
 
     static void val(int[][] arr) {
-        int min = arr[0][0];
-        int max = 0;
+        // int min = arr[0][0];
+        int min = Integer.MAX_VALUE;
+        // int max = 0;
+        int max = Integer.MIN_VALUE;
+
 
         for(int row=0; row<arr.length; row++) {
             for(int col=0; col<arr.length; col++) {
