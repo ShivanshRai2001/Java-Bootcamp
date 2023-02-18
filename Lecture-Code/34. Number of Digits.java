@@ -4,6 +4,7 @@ public class Practice2 {
 
         System.out.println(findNumber(num));
         System.out.println(digits(54637));
+        System.out.println(digits2(546375441));
     }
 
     static int findNumber(int[] nums) {
@@ -41,5 +42,13 @@ public class Practice2 {
             num = num/10;
         }
         return count;
+    }
+
+    static int digits2(int num) {
+        if(num < 0) {
+            num = num * -1;
+        }
+
+        return (int)(Math.log10(num)) + 1;
     }
 }
