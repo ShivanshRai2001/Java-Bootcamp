@@ -7,6 +7,7 @@ public class Practice2 {
         System.out.println(ceiling(arr, target));
     }
 
+    // Smallest number greater than or equal to the target number
     static int ceiling(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
