@@ -1,3 +1,7 @@
                                         **  Important Code  **
                                    
 19. Prime number
+
+
+                                        **  Very Important Topic **
+35. Binary search onwards
