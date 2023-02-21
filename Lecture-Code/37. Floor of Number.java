@@ -7,6 +7,7 @@ public class Practice2 {
         System.out.println(floor(arr, target));
     }
 
+    // Greatest number smaller than or equal to the target
     static int floor(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
