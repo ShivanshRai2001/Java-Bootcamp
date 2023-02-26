@@ -23,7 +23,7 @@ public class Practice4 {
         System.out.println("- for Subtraction");
         System.out.println("* for Multiplication");
         System.out.println("/ for Division");
-        System.out.println("s for Square");
+        System.out.println("p for Power");
         System.out.print("Enter your choice : ");
         char operation = sc.next().trim().charAt(0);
 
@@ -41,18 +41,18 @@ public class Practice4 {
         }
 
         else if(operation == '-') {
-            System.out.print("Enter the first number : ");
-            int num1 = sc.nextInt();
+            System.out.print("\nEnter the first number : ");
+            int min_num1 = sc.nextInt();
             System.out.print("Enter the second number : ");
-            int num2 = sc.nextInt();
+            int min_num2 = sc.nextInt();
 
-            int sub = num1 - num2;
+            int sub = min_num1 - min_num2;
             System.out.println("The subtraction of number is = " + sub);
         }
 
         else if(operation == '*') {
             int pro = 1;
-            System.out.print("Enter the no. of number to be taken : ");
+            System.out.print("\nEnter the no. of number to be taken : ");
             int mul = sc.nextInt();
 
             for(int i=1; i<=mul; i++) {
@@ -64,13 +64,29 @@ public class Practice4 {
         }
 
         else if(operation == '/') {
-            System.out.print("Enter the first number : ");
-            double num1 = sc.nextInt();
+            System.out.print("\nEnter the first number : ");
+            double Div_num1 = sc.nextInt();
             System.out.print("Enter the second number : ");
-            double num2 = sc.nextInt();
+            double Div_num2 = sc.nextInt();
 
-            double div = num1 / num2;
+            double div = Div_num1 / Div_num2;
             System.out.println("The division of number is = " + div);
+        }
+
+        else if(operation == 'p') {
+            System.out.print("\nEnter the number : ");
+            int pow_num = sc.nextInt();
+            System.out.print("Enter the power : ");
+            int pow = sc.nextInt();
+            
+            int actual = pow;
+            int power = 1;
+            while(pow != 0) {
+                power *= pow_num;
+                --pow;
+            }
+
+            System.out.println(pow_num + " to the power " + actual + " is = " + power);
         }
     }
 }
