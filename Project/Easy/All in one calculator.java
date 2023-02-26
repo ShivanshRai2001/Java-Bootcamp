@@ -49,5 +49,28 @@ public class Practice4 {
             int sub = num1 - num2;
             System.out.println("The subtraction of number is = " + sub);
         }
+
+        else if(operation == '*') {
+            int pro = 1;
+            System.out.print("Enter the no. of number to be taken : ");
+            int mul = sc.nextInt();
+
+            for(int i=1; i<=mul; i++) {
+                System.out.print("Enter the " + i + " element : ");
+                int pro_num = sc.nextInt();
+                pro *= pro_num;
+            }
+            System.out.println("The multiplication of the number is = " + pro);
+        }
+
+        else if(operation == '/') {
+            System.out.print("Enter the first number : ");
+            double num1 = sc.nextInt();
+            System.out.print("Enter the second number : ");
+            double num2 = sc.nextInt();
+
+            double div = num1 / num2;
+            System.out.println("The division of number is = " + div);
+        }
     }
 }
