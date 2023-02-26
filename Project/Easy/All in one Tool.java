@@ -6,12 +6,19 @@ public class Practice4 {
 
         System.out.println("\n\t ** All in one calculator. ** ");
         System.out.println("\nChoose options :- ");
-        System.out.println("A. Simple Calculator.");
+        System.out.println("1 for Simple Calculator.");
+        System.out.println("2 for Basic Converters.");
+        System.out.println("3 for Diatance converstions.");
         System.out.print("Enter your choice : ");
-        char process = input.next().trim().charAt(0);
+        // char process = input.next().trim().charAt(0);
+        int process = input.nextInt();
 
-        if(process == 'A' || process == 'a') {
+        if(process == 1) {
             calculator();
+        }
+
+        else if(process == 2) {
+            converters();
         }
     }
 
@@ -87,6 +94,28 @@ public class Practice4 {
             }
 
             System.out.println(pow_num + " to the power " + actual + " is = " + power);
+        }
+    }
+
+    static void converters() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("\nChoose options :- ");
+        System.out.println("A for Temperature");
+        System.out.println("B for Currency");
+        System.out.print("Enter your choice : ");
+        char operation = sc.next().trim().charAt(0);
+
+        if(operation == 'A' || operation == 'a') {
+            System.out.println("Enter the type of converstion :- ");
+            System.out.println("A for celcius to feranite.");
+            System.out.println("B for feranite to celcius.");
+            System.out.println("Enter the option : ");
+            char type = sc.next().trim().charAt(0);
+
+            if(type == 'A' || type == 'a') {
+
+            }
         }
     }
 }
