@@ -9,7 +9,12 @@ public class Practice4 {
         System.out.println("1 for Simple Calculator.");
         System.out.println("2 for Basic Converters.");
         System.out.println("3 for Diatance converstions.");
-        System.out.println("4 for HCF and LCM");
+        System.out.println("4 for HCF and LCM.");
+        System.out.println("5 for Odd and Even.");
+        System.out.println("6 for Electricity Bill Calculator.");
+        System.out.println("7 for Simple Interest Calculator.");
+        System.out.println("8 for Discount Calculator.");
+        System.out.println("9 for CGPA Calculator.");
         System.out.println("10 for Geometry Calculator.");
         System.out.print("Enter your choice : ");
         // char process = input.next().trim().charAt(0);
@@ -29,6 +34,26 @@ public class Practice4 {
 
         else if(process == 4) {
             hcf_lcm();
+        }
+
+        else if(process == 5) {
+            oddeven();
+        }
+
+        else if(process == 6) {
+            ele_bill();
+        }
+
+        else if(process == 7) {
+            simple_inter();
+        }
+
+        else if(process == 8) {
+            discount();
+        }
+
+        else if(process == 9) {
+            CGPA();
         }
 
         else if(process == 10) {
@@ -200,6 +225,161 @@ public class Practice4 {
             int lcm = (num1 * num2) / hcf;
             System.out.println("The LCM of the number is : " + lcm);
         }
+    }
+
+    static void oddeven() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number : ");
+        int num = input.nextInt();
+
+        if(num % 2 == 0) {
+            System.out.println("The number is even.");
+        }
+        else {
+            System.out.println("The number is not even.");
+        }
+    }
+
+    static void ele_bill() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Select the appliance.");
+        System.out.println("A - AC");
+        System.out.println("F - Fan");
+        System.out.println("H - Heater");
+        System.out.print("Enter your appliance : ");
+        char app = input.next().trim().charAt(0);
+
+        float k_watt_p = 12;
+
+        if(app == 'a' || app == 'A') {
+            float ac_pow_con = 600;
+            System.out.print("Enter the hours of use per day : ");
+            float ac_hours = input.nextFloat();
+
+            float e_ac = ac_pow_con * ac_hours / 1000;
+            float c_ac = e_ac * k_watt_p;
+            System.out.println("Electricity cost per day : " + c_ac);
+            System.out.println("Electricity cost per month : " + c_ac * 31);
+            System.out.println("Electricity cost per year : " + c_ac * 365);
+        }
+
+        if(app == 'f' || app == 'F') {
+            float fan_pow_con = 70;
+            System.out.print("Enter the hours of use per day : ");
+            float fan_hours = input.nextFloat();
+
+            float e_fan = fan_pow_con * fan_hours / 1000;
+            float c_fan = e_fan * k_watt_p;
+            System.out.println("Electricity cost per day : " + c_fan);
+            System.out.println("Electricity cost per month : " + c_fan * 31);
+            System.out.println("Electricity cost per year : " + c_fan * 365);
+        }
+
+        if(app == 'h' || app == 'H') {
+            float heat_pow_con = 2000;
+            System.out.print("Enter the hours of use per day : ");
+            float heat_hours = input.nextFloat();
+
+            float e_heat = heat_pow_con * heat_hours / 1000;
+            float c_heat = e_heat * k_watt_p;
+            System.out.println("Electricity cost per day : " + c_heat);
+            System.out.println("Electricity cost per month : " + c_heat * 31);
+            System.out.println("Electricity cost per year : " + c_heat * 365);
+        }
+    }
+
+    static void simple_inter() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the principle amount : ");
+        int principle = input.nextInt();
+
+        System.out.print("Enter the rate of the amount : ");
+        int rate = input.nextInt();
+
+        System.out.print("Enter the time duration of interest : ");
+        int time = input.nextInt();
+
+        // int simple_interest = principle * (1 + rate * time);
+        int simple_interest = (principle * time * rate) / 100;
+        System.out.println("The interest earned is : " + simple_interest);
+
+        int total_value = simple_interest + principle;
+        System.out.println("The total value is : " + total_value);
+    }
+
+    static void discount() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the original price : ");
+        float org_pr = input.nextFloat();
+
+        System.out.print("Enter the discount percentage : ");
+        float dic = input.nextFloat();
+
+        float pe_pic = org_pr * (dic / 100);
+        float dic_amt = org_pr - pe_pic;
+        System.out.println("The discounted amount is : " + dic_amt);
+    }
+
+    static void CGPA() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the total number of subjects : ");
+        int num = input.nextInt();
+
+        float gp = 0;
+        float gp_add = 0;
+        float mar_per = 0;
+
+        for(int i=1; i<=num; i++) {
+            System.out.print("Enter the marks of " + i + " subject : ");
+            float marks = input.nextFloat();
+
+            if(marks >= 91 && marks <= 100) {
+                gp = 10;
+            }
+            else if(marks >= 81 && marks <= 90) {
+                gp = 9;
+            }
+            else if(marks >= 71 && marks <= 80) {
+                gp = 8;
+            }
+            else if(marks >= 61 && marks <= 70) {
+                gp = 7;
+            }
+            else if(marks >= 51 && marks <= 60) {
+                gp = 6;
+            }
+            else if(marks >= 41 && marks <= 50) {
+                gp = 5;
+            }
+            else if(marks >= 31 && marks <= 40) {
+                gp = 4;
+            }
+            else if(marks >= 21 && marks <= 30) {
+                gp = 3;
+            }
+            else if(marks >= 11 && marks <= 20) {
+                gp = 2;
+            }
+            else if(marks >= 1 && marks <= 10) {
+                gp = 1;
+            }
+
+            System.out.print("GP of " + i + " subject is : " + gp + "\n");
+
+            gp_add += gp;
+            mar_per += marks;
+        }
+
+        float CGPA = gp_add / num;
+        System.out.println("The CGPA is : " + CGPA);
+
+        float per = (mar_per / num);
+        System.out.println("The percentage is : " + per + "%.");
     }
 
     static void geometry() {
@@ -517,5 +697,4 @@ public class Practice4 {
         }
     }
 
-    
 }
