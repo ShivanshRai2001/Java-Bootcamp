@@ -9,6 +9,7 @@ public class Practice4 {
         System.out.println("1 for Simple Calculator.");
         System.out.println("2 for Basic Converters.");
         System.out.println("3 for Diatance converstions.");
+        System.out.println("4 for Geometry Calculator.");
         System.out.print("Enter your choice : ");
         // char process = input.next().trim().charAt(0);
         int process = input.nextInt();
@@ -107,15 +108,31 @@ public class Practice4 {
         char operation = sc.next().trim().charAt(0);
 
         if(operation == 'A' || operation == 'a') {
-            System.out.println("Enter the type of converstion :- ");
-            System.out.println("A for celcius to feranite.");
-            System.out.println("B for feranite to celcius.");
-            System.out.println("Enter the option : ");
+            System.out.println("\nEnter the type of converstion :- ");
+            System.out.println("A for celsius to fahrenheit.");
+            System.out.println("B for fahrenheit to celsius.");
+            System.out.print("Enter the option : ");
             char type = sc.next().trim().charAt(0);
 
             if(type == 'A' || type == 'a') {
+                System.out.print("\nEnter the temperature in celsius : ");
+                float c_temp = sc.nextFloat();
 
+                float c_ans = (c_temp * 9/5) + 32;
+                System.out.println(c_temp + " in fahrenheit is : " + c_ans);
             }
+
+            else if(type == 'B' || type == 'b') {
+                System.out.print("\nEnter the temperature in fahrenheit : ");
+                float f_temp = sc.nextFloat();
+
+                float f_ans = (f_temp - 32) * 5/9;
+                System.out.println(f_temp + " in celsius is : " + f_ans);
+            }
+        }
+
+        else if(operation == 'B' || operation == 'b') {
+            
         }
     }
 }
