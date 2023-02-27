@@ -9,7 +9,8 @@ public class Practice4 {
         System.out.println("1 for Simple Calculator.");
         System.out.println("2 for Basic Converters.");
         System.out.println("3 for Diatance converstions.");
-        System.out.println("4 for Geometry Calculator.");
+        System.out.println("4 for HCF and LCM");
+        System.out.println("10 for Geometry Calculator.");
         System.out.print("Enter your choice : ");
         // char process = input.next().trim().charAt(0);
         int process = input.nextInt();
@@ -22,7 +23,15 @@ public class Practice4 {
             converters();
         }
 
+        else if(process == 3) {
+            distance();
+        }
+
         else if(process == 4) {
+            hcf_lcm();
+        }
+
+        else if(process == 10) {
             geometry();
         }
     }
@@ -107,7 +116,6 @@ public class Practice4 {
 
         System.out.println("\nChoose options :- ");
         System.out.println("A for Temperature");
-        System.out.println("B for Currency");
         System.out.print("Enter your choice : ");
         char operation = sc.next().trim().charAt(0);
 
@@ -135,8 +143,62 @@ public class Practice4 {
             }
         }
 
-        else if(operation == 'B' || operation == 'b') {
+        
+    }
 
+    static void distance() {
+
+    }
+
+    static void hcf_lcm() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the first number : ");
+        int num1 = input.nextInt();
+
+        System.out.print("Enter the second number : ");
+        int num2 = input.nextInt();
+
+        System.out.println("Want to find :- ");
+        System.out.println("A for HCF");
+        System.out.println("B for LCM");
+        System.out.println("C for Both");
+        System.out.println("Enter your option : ");
+        char find = input.next().trim().charAt(0);
+
+        if(find == 'A' || find == 'a') {
+            int hcf = 0;
+            for(int i=1; i<=num1||i<=num2; i++) {
+                if(num1%i == 0 && num2%i == 0) {
+                    hcf = i;
+                }
+            }
+            System.out.println("The HCF of the number is : " + hcf);
+        }
+
+        else if(find == 'B' || find == 'b') {
+            int hcf = 0;
+            for(int i=1; i<=num1||i<=num2; i++) {
+                if(num1%i == 0 && num2%i == 0) {
+                    hcf = i;
+                }
+            }
+
+            int lcm = (num1 * num2) / hcf;
+            System.out.println("The LCM of the number is : " + lcm);
+        }
+
+        else if(find == 'C' || find == 'c') {
+            int hcf = 0;
+            for(int i=1; i<=num1||i<=num2; i++) {
+                if(num1%i == 0 && num2%i == 0) {
+                    hcf = i;
+                }
+            }
+            System.out.println("The HCF of the number is : " + hcf);
+
+            int lcm = (num1 * num2) / hcf;
+            System.out.println("The LCM of the number is : " + lcm);
         }
     }
 
@@ -454,4 +516,6 @@ public class Practice4 {
             }
         }
     }
+
+    
 }
