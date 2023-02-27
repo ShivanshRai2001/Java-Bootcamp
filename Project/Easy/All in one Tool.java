@@ -16,10 +16,24 @@ public class Practice4 {
         System.out.println("8 for Discount Calculator.");
         System.out.println("9 for CGPA Calculator.");
         System.out.println("10 for Geometry Calculator.");
+        System.out.println("11 for leap year finder.");
+        System.out.println("12 for Two points distance calculator.");
+        System.out.println("13 for Commission Calculator.");
+        System.out.println("14 for Depreciation Calculator.");
+        System.out.println("15 for Finding Batting Average.");
+        System.out.println("16 for Compound Interest.");
+        System.out.println("17 for Marks Average.");
+        System.out.println("18 for Permutation and Combination.");
+        System.out.println("19 for Finding Vovels in String.");
+        System.out.println("20 for Checking number is Perfect or not.");
+        System.out.println("21 for Sum of digit of number.");
         System.out.print("Enter your choice : ");
-        // char process = input.next().trim().charAt(0);
         int process = input.nextInt();
 
+        process(process);
+    }
+
+    static void process(int process) {
         if(process == 1) {
             calculator();
         }
@@ -37,7 +51,7 @@ public class Practice4 {
         }
 
         else if(process == 5) {
-            oddeven();
+            odd_even();
         }
 
         else if(process == 6) {
@@ -58,6 +72,50 @@ public class Practice4 {
 
         else if(process == 10) {
             geometry();
+        }
+
+        else if(process == 11) {
+            leap();
+        }
+
+        else if(process == 12) {
+            point_distance();
+        }
+
+        else if(process == 13) {
+            commission();
+        }
+
+        else if(process == 14) {
+            depreciation();
+        }
+
+        else if(process == 15) {
+            batting();
+        }
+
+        else if(process == 16) {
+            compound();
+        }
+
+        else if(process == 17) {
+            marks();
+        }
+
+        else if(process == 18) {
+            pnc();
+        }
+
+        else if(process == 19) {
+            vovels();
+        }
+
+        else if(process == 20) {
+            perfect();
+        }
+
+        else if(process == 21) {
+            sum_of_digit();
         }
     }
 
@@ -227,7 +285,7 @@ public class Practice4 {
         }
     }
 
-    static void oddeven() {
+    static void odd_even() {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter the number : ");
@@ -695,6 +753,261 @@ public class Practice4 {
                 System.out.println("Invalid input.");
             }
         }
+    }
+
+    static void leap() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the year : ");
+        int year = input.nextInt();
+        
+        int leap_year = year % 4;
+
+        if(leap_year == 0){
+            System.out.println("The entered year is leap year.");
+        }
+        else{
+            System.out.println("It is not a leap year.");
+        }
+    }
+
+    static void point_distance() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the x1 point : ");
+        int x1 = input.nextInt();
+
+        System.out.print("Enter the x2 point : ");
+        int x2 = input.nextInt();
+
+        System.out.print("Enter the y1 point : ");
+        int y1 = input.nextInt();
+
+        System.out.print("Enter the y2 point : ");
+        int y2 = input.nextInt();
+
+        int cal = ((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1));
+        int res = (int) Math.sqrt(cal);
+        
+        System.out.println("The distance between two points is : " + res);
+    }
+
+    static void commission() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the amount : ");
+        float amount = input.nextFloat();
+
+        System.out.print("Enter the commission percentage : ");
+        float per = input.nextFloat();
+
+        float ans = amount * (per / 100);
+
+        System.out.println("The commission amount is : " + ans);
+    }
+
+    static void depreciation() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the asset amount : ");
+        float ase = input.nextFloat();
+
+        System.out.print("Enter the salvage value : ");
+        float sal = input.nextFloat();
+
+        System.out.print("Enter the depreciation years : ");
+        float dep = input.nextFloat();
+
+        float ans = (ase - sal) / dep;
+        System.out.println("The depreciation amount is : " + ans);
+    }
+
+    static void batting() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number of runs : ");
+        int run = input.nextInt();
+
+        System.out.print("Enter the number of innings played : ");
+        int inn = input.nextInt();
+
+        System.out.print("Enter the number of times not out : ");
+        int nout = input.nextInt();
+
+        float bat_avg = (run / (inn - nout));
+        System.out.println("Batting average is : " + bat_avg);
+    }
+
+    static void compound() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the principle amount : ");
+        float p_amt = input.nextFloat();
+
+        System.out.print("Enter the percentage rate : ");
+        float rate = input.nextFloat();
+
+        System.out.print("Enter the time : ");
+        float time = input.nextFloat();
+
+        float x = 1 + (rate / 100);
+        float amt = (float) (p_amt * Math.pow(x, time));
+
+        float CI = amt - p_amt;
+        System.out.println("The compound interest is : " + CI);
+    }
+
+    static void marks() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number of subject : ");
+        int num = input.nextInt();
+
+        float sum = 0;
+
+        for(int i=1; i<=num; i++) {
+            System.out.print("Enter the marks of " + i + " subject : ");
+            float marks = input.nextInt();
+
+            sum += marks;
+        }
+
+        float avg = sum / num;
+        System.out.println("The average of marks is : " + avg);
+    }
+
+    static void pnc() {
+        Scanner input = new Scanner(System.in);
+
+        while(true) {
+            System.out.println("Enter the choise of permutation or combination.");
+            System.out.println("P - Permutation");
+            System.out.println("C - Combination");
+            System.out.println("E - Exit");
+            System.out.print("Enter your option : ");
+            char sel = input.next().trim().charAt(0);
+    
+            if(sel == 'P' || sel == 'p') {
+                System.out.print("Enter total number of elements : ");
+                int p_ele = input.nextInt();
+    
+                System.out.print("Enter the elements that has to be arranged : ");
+                int p_arr = input.nextInt();
+    
+                int p1 = 1;
+                for(int i=1; i<=p_ele; i++) {
+                    p1 = p1 * i; // Factorial
+                }
+    
+                int den1 = p_ele - p_arr;
+                int p2 = 1;
+                for(int i=1; i<=den1; i++) {
+                    p2 = p2 * i;
+                }
+    
+                int per = p1 / p2;
+                System.out.println("Permutation is : " + per);
+            }
+    
+            else if(sel == 'C' || sel == 'c') {
+                System.out.print("Enter total number of elements : ");
+                int c_ele = input.nextInt();
+    
+                System.out.print("Enter the elements to be selected : ");
+                int c_sel = input.nextInt();
+    
+                int c1 = 1;
+                for(int i=1; i<=c_ele; i++) {
+                    c1 = c1 * i;
+                }
+                System.out.println("c1 = " + c1);
+    
+                int den2 = c_ele - c_sel;
+                int c2 = 1;
+                for(int i=1; i<=den2; i++) {
+                    c2 = c2 * i;
+                }
+                System.out.println("c2 = " + c2);
+    
+                int r = 1;
+                for(int i=1; i<=c_sel; i++) {
+                    r = r * i;
+                }
+                System.out.println("r = " + r);
+    
+                int d_com = c2 * r;
+                int com = c1 / d_com;
+                System.out.println("Combination is : " + com);
+            }
+
+            else if(sel == 'E' || sel == 'e') {
+                break;
+            }
+
+            else {
+                System.out.println("Invalid Input.");
+            }
+        }
+    }
+
+    static void vovels() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the string : ");
+        String str = input.nextLine();
+
+        int len = str.length();
+        String vowel = "";
+        String conso = "";
+
+        for(int i=0; i<len; i++) {
+            char vol = str.charAt(i);
+            if(vol == 'a' || vol == 'e' || vol == 'i' || vol == 'o' || vol == 'n' || vol == 'A' || vol == 'E' || vol == 'I' || vol == 'O' || vol == 'N') {
+                vowel += vol;
+            }
+            else {
+                conso += vol;
+            }
+        }
+        System.out.println("The vowels are : " + vowel);
+        System.out.println("The consonents are : " + conso);
+    }
+
+    static void perfect() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number : ");
+        int num = input.nextInt();
+
+        int sum = 0;
+        for(int i=1; i<num; i++) {
+            if(num%i == 0) {
+                sum += i;
+            }
+        }
+        System.out.println("The sum of the factorial of number is : " + sum);
+
+        if(sum == num) {
+            System.out.println("Perfect number.");
+        }
+        else {
+            System.out.println("Not a perfect number.");
+        }
+    }
+
+    static void sum_of_digit() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number : ");
+        int num = input.nextInt();
+
+        int sum = 0, rem;
+        while(num > 0) {
+            rem = num % 10;
+            sum += rem;
+            num = num / 10;
+        }
+        System.out.println("The sum of the number is : " + sum);
     }
 
 }
