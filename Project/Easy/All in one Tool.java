@@ -33,6 +33,8 @@ public class Practice4 {
         System.out.println("24 for Finding Website type");
         System.out.println("25 for Printing table of a number.");
         System.out.println("26 for Pythagorean Triples.");
+        System.out.println("27 for Quadratic Equaltion solution.");
+        System.out.println("28 for Month Day Calculator.");
         System.out.println("50 for Rock Paper Scissor Game");
         System.out.print("Enter your choice : ");
         int process = input.nextInt();
@@ -143,6 +145,14 @@ public class Practice4 {
 
         else if(process == 26) {
             Pytha_trip();
+        }
+
+        else if(process == 27) {
+            quad_eq();
+        }
+
+        else if(process == 28) {
+            month_day();
         }
 
         else if(process == 50) {
@@ -1188,6 +1198,117 @@ public class Practice4 {
         else {
             System.out.println("Not a Pythagorean Triples");
         }
+    }
+
+    static void quad_eq() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the term a : ");
+        int a = input.nextInt();
+
+        System.out.println("Enter the term b : ");
+        int b = input.nextInt();
+
+        System.out.println("Enter the term c : ");
+        int c = input.nextInt();
+
+        float under = ((b * b) - 4 * a * c);
+        float und_sq = (float) Math.sqrt(under);
+
+        if(und_sq > 0) {
+            float r1 = ((-b + und_sq) / (2 * a));
+            float r2 = ((-b - und_sq) / (2 * a));
+            System.out.println("The roots are " + r1 + " and " + r2);
+        } 
+        else if (und_sq == 0.0) {
+            float r1 = (-b / (2 * a));
+            System.out.println("The root is " + r1);
+        }
+        else {
+            System.out.println("The equation has no real roots.");
+        }
+    }
+
+    static void month_day() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the month number : ");
+        int month = input.nextInt();
+
+        System.out.print("Enter the year : ");
+        int year = input.nextInt();
+
+        String month_name = "Unknown";
+        int no_of_day = 0;
+
+        switch(month) {
+            case 1 :
+                month_name = "January";
+                no_of_day = 31;
+            break;
+
+            case 2 :
+                month_name = "Febuary";
+                if((year % 4 == 0) || (year % 4 == 0) && (year % 100 != 0)) {
+                    no_of_day = 29;
+                }
+                else {
+                    no_of_day = 28;
+                }
+            break;
+
+            case 3 :
+                month_name = "March";
+                no_of_day = 31;
+            break;
+
+            case 4 :
+                month_name = "April";
+                no_of_day = 30;
+            break;
+
+            case 5 :
+                month_name = "May";
+                no_of_day = 31;
+            break;
+            
+            case 6 :
+                month_name = "June";
+                no_of_day = 30;
+            break;
+
+            case 7 :
+                month_name = "July";
+                no_of_day = 31;
+            break;
+
+            case 8 :
+                month_name = "August";
+                no_of_day = 31;
+            break;
+
+            case 9 :
+                month_name = "September";
+                no_of_day = 30;
+            break;
+
+            case 10 :
+                month_name = "Octuber";
+                no_of_day = 31;
+            break;
+
+            case 11 :
+                month_name = "November";
+                no_of_day = 30;
+            break;
+
+            case 12 :
+                month_name = "December";
+                no_of_day = 31;
+            break;
+        }
+
+        System.out.print(month_name + " " + year + " has " + no_of_day + " days\n");
     }
 
     static void rock_paper_game() {
