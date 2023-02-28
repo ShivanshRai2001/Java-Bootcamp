@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Practice4 {
     public static void main(String[] args) {
@@ -27,6 +28,8 @@ public class Practice4 {
         System.out.println("19 for Finding Vovels in String.");
         System.out.println("20 for Checking number is Perfect or not.");
         System.out.println("21 for Sum of digit of number.");
+        System.out.println("22 for Two Matrix Addtion.");
+        System.out.println("50 for Rock Paper Scissor Game");
         System.out.print("Enter your choice : ");
         int process = input.nextInt();
 
@@ -116,6 +119,14 @@ public class Practice4 {
 
         else if(process == 21) {
             sum_of_digit();
+        }
+
+        else if(process == 22) {
+            two_matrix_add();
+        }
+
+        else if(process == 50) {
+            rock_paper_game();
         }
     }
 
@@ -1010,4 +1021,127 @@ public class Practice4 {
         System.out.println("The sum of the number is : " + sum);
     }
 
+    static void two_matrix_add() {
+        Scanner sc = new Scanner(System.in);
+        int [][] mat1;
+        int [][] mat2;
+        int [][] sum;
+        mat1 = new int [2][3];
+        mat2 = new int [2][3];
+        sum = new int [2][3];
+
+        System.out.println("Enter the element of matrix 1 :- ");
+        for (int i=0; i<mat1.length; i++){
+            for (int j=0; j<=mat1.length; j++){
+                System.out.printf("Enter the element at [%d,%d] matrix 1 : ", i, j);
+                mat1[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("\nEnter the element of matrix 2 :- ");
+        for (int a=0; a<mat2.length; a++){
+            for (int b=0; b<=mat2.length; b++){
+                System.out.printf("Enter the element at [%d,%d] matrix 2 : ", a, b);
+                mat2[a][b] = sc.nextInt();
+            }
+        }
+
+        System.out.println("\nElements at matrix 1 :-");
+        for (int k=0; k<mat1.length; k++){
+            for (int l=0; l<=mat1.length; l++){
+                System.out.printf("Element at [%d,%d] is in martrix 1 : ", k, l);
+                System.out.println(mat1[k][l]);
+            }
+        }
+
+        System.out.println("\nElements at matrix 2 :-");
+        for (int c=0; c<mat2.length; c++){
+            for (int d=0; d<=mat2.length; d++){
+                System.out.printf("Element at [%d,%d] is in martrix 2 : ", c, d);
+                System.out.println(mat2[c][d]);
+            }
+        }
+
+        System.out.println("\nSum of the martix is :- ");
+        for (int m=0; m<sum.length; m++){
+            for (int n=0; n<=sum.length; n++){
+                sum[m][n] = mat1[m][n] + mat2[m][n];
+                System.out.print(sum[m][n]);
+                System.out.print(" ");
+            }
+            System.out.println("");
+        }
+    }
+
+
+
+    static void rock_paper_game() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Rock Paper & Scissor game.");
+
+        System.out.println("0 means Rock");
+        System.out.println("1 means Paper");
+        System.out.println("2 means Scissor");
+        System.out.println("\nEnter your choice : ");
+
+        int input = sc.nextInt();
+
+        System.out.println("Your Choice : ");
+        if (input == 0) {
+            System.out.println("Rock");
+        }
+        else if (input == 1){
+            System.out.println("Paper");
+        }
+        else if (input == 2){
+            System.out.println("Scissor");
+        }
+
+        Random numgen = new Random();
+
+        System.out.println("\nComputer Choice : ");
+        int randomNumber = numgen.nextInt(3);
+        System.out.println(randomNumber);
+
+        if (randomNumber == 0) {
+            System.out.println("Rock");
+        }
+        else if (randomNumber == 1){
+            System.out.println("Paper");
+        }
+        else if (randomNumber == 2){
+            System.out.println("Scissor");
+        }
+
+        System.out.println("\nResult : ");
+
+        if (input == randomNumber) {
+            System.out.println("Its a tie.");
+        }
+        else if (input == 0 && randomNumber == 1) {
+            System.out.println("You Loss!");
+            System.out.println("Paper cover Rock");
+        }
+        else if (input == 0 && randomNumber == 2) {
+            System.out.println("You Won!");
+            System.out.println("Rock break Scissor");
+        }
+        else if (input == 1 && randomNumber == 0) {
+            System.out.println("You Won!");
+            System.out.println("Paper Cover Rock");
+        }
+        else if (input == 1 && randomNumber == 2) {
+            System.out.println("You Loss!");
+            System.out.println("Scissor cuts Paper");
+        }
+        else if (input == 2 && randomNumber == 0) {
+            System.out.println("You Loss!");
+            System.out.println("Rock break Scissor");
+        }
+        else if (input == 2 && randomNumber == 1) {
+            System.out.println("You Won!");
+            System.out.println("Scissor cut Paper");
+        }
+        System.out.println("\n");
+    }
 }
