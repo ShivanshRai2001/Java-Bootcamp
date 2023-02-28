@@ -29,6 +29,9 @@ public class Practice4 {
         System.out.println("20 for Checking number is Perfect or not.");
         System.out.println("21 for Sum of digit of number.");
         System.out.println("22 for Two Matrix Addtion.");
+        System.out.println("23 for Income Tax Calculator.");
+        System.out.println("24 for Finding Website type");
+        System.out.println("25 for Printing table of a number.");
         System.out.println("50 for Rock Paper Scissor Game");
         System.out.print("Enter your choice : ");
         int process = input.nextInt();
@@ -123,6 +126,18 @@ public class Practice4 {
 
         else if(process == 22) {
             two_matrix_add();
+        }
+
+        else if(process == 23) {
+            income_tax();
+        }
+
+        else if(process == 24) {
+            web_type();
+        }
+
+        else if(process == 25) {
+            table();
         }
 
         else if(process == 50) {
@@ -1073,7 +1088,81 @@ public class Practice4 {
         }
     }
 
+    static void income_tax() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Income Tax");
+        System.out.println("Enter your income : ");
+        float income = sc.nextFloat();
+        float tax = 0;
 
+        if (income<=2.5f){
+            System.out.println("No Income tax");
+            tax = tax + 0;
+        }
+        else if (income>2.5f && income<5){
+            System.out.println("Income tax is 5%");
+            tax = tax + 0.05f * (income - 2.5f);
+        }
+        else if (income>5 && income<10){
+            System.out.println("Income tax is 20%");
+            tax = tax + 0.05f * (5.0f - 2.5f);
+            tax = tax + 0.2f * (income - 5f);
+        }
+        else if (income>10){
+            System.out.println("Income tax is 30%");
+            tax = tax + 0.05f * (5.0f - 2.5f);
+            tax = tax + 0.2f * (10.0f - 5f);
+            tax = tax + 0.3f * (income - 10.0f);
+        }
+        System.out.println("Tax amount is : ");
+        System.out.println(tax);
+    }
+
+    static void web_type() {
+        Scanner website = new Scanner(System.in);
+        System.out.println("Site Type.");
+        System.out.println("Enter the website url : ");
+        String web = website.nextLine();
+
+        if(web.endsWith(".com")){
+            System.out.println("Entered website is commercial website.");
+        }
+        else if(web.endsWith(".org")){
+            System.out.println("Entered website is organizational website.");
+        }
+        else if(web.endsWith(".in")){
+            System.out.println("Entered website is Indian website.");
+        }
+    }
+
+    static void table() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the to print that table : ");
+        int num = sc.nextInt();
+
+        System.out.println("Table is : ");
+        for (int i=1; i<=10; i++){
+            int mul = num * i;
+            System.out.print(num); 
+            System.out.print(" x ");
+            System.out.print(i);
+            System.out.print(" = ");
+            System.out.println(mul);
+            // System.out.printf("%d X %d = %d\n", n, i, n*i);
+        }
+        
+        System.out.println("Table in reverse order : ");
+        for (int i=10; i>=0; i--){
+            int mul = num * i;
+            System.out.print(num); 
+            System.out.print(" x ");
+            System.out.print(i);
+            System.out.print(" = ");
+            System.out.println(mul);
+            // System.out.printf("%d X %d = %d\n", n, i, n*i);
+        }
+    }
 
     static void rock_paper_game() {
         Scanner sc = new Scanner(System.in);
