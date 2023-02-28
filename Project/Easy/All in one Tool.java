@@ -32,6 +32,7 @@ public class Practice4 {
         System.out.println("23 for Income Tax Calculator.");
         System.out.println("24 for Finding Website type");
         System.out.println("25 for Printing table of a number.");
+        System.out.println("26 for Pythagorean Triples.");
         System.out.println("50 for Rock Paper Scissor Game");
         System.out.print("Enter your choice : ");
         int process = input.nextInt();
@@ -138,6 +139,10 @@ public class Practice4 {
 
         else if(process == 25) {
             table();
+        }
+
+        else if(process == 26) {
+            Pytha_trip();
         }
 
         else if(process == 50) {
@@ -1161,6 +1166,27 @@ public class Practice4 {
             System.out.print(" = ");
             System.out.println(mul);
             // System.out.printf("%d X %d = %d\n", n, i, n*i);
+        }
+    }
+
+    static void Pytha_trip() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the first number : ");
+        int num1 = input.nextInt();
+        System.out.print("Enter the second number : ");
+        int num2 = input.nextInt();
+        System.out.print("Enter the third number : ");
+        int num3 = input.nextInt();
+
+        int lhs = (num1 * num1) + (num2 * num2);
+        int rhs = num3 * num3;
+
+        if(lhs == rhs) {
+            System.out.print("Pythagorean Triples");
+        }
+        else {
+            System.out.println("Not a Pythagorean Triples");
         }
     }
 
