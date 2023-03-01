@@ -36,6 +36,7 @@ public class Practice4 {
         System.out.println("27 for Quadratic Equaltion solution.");
         System.out.println("28 for Month Day Calculator.");
         System.out.println("29 for Checking Integer or not");
+        System.out.println("30 for Pass or Fail Teller.");
         System.out.println("50 for Rock Paper Scissor Game");
         System.out.print("Enter your choice : ");
         int process = input.nextInt();
@@ -158,6 +159,10 @@ public class Practice4 {
 
         else if(process == 29) {
             int_num();
+        }
+
+        else if(process == 30) {
+            pass_fail();
         }
 
         else if(process == 50) {
@@ -1320,6 +1325,29 @@ public class Practice4 {
         System.out.println("Enter a number : ");
         Scanner sc = new Scanner(System.in);
         System.out.println(sc.hasNextInt());
+    }
+
+    static void pass_fail() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Pass or Fall Teller.");
+        System.out.println("Enter the marks in first subject : ");
+        float mark1 = sc.nextFloat();
+        System.out.println("Enter the marks in second subject : ");
+        float mark2 = sc.nextFloat();
+        System.out.println("Enter the marks in thirst subject : ");
+        float mark3 = sc.nextFloat();
+        float total = mark1 + mark2 + mark3;
+        float div = total / 300;
+        float per = div * 100;
+        System.out.println("Percentage obtained is : ");
+        System.out.println(per);
+
+        if (per>40 && mark1>33 && mark2>33 && mark3>33){
+            System.out.println("Congratulation you are PASS.");
+        }
+        else{
+            System.out.println("You are FAIL.");
+        }
     }
 
     static void rock_paper_game() {
