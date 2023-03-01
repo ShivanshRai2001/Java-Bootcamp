@@ -35,6 +35,7 @@ public class Practice4 {
         System.out.println("26 for Pythagorean Triples.");
         System.out.println("27 for Quadratic Equaltion solution.");
         System.out.println("28 for Month Day Calculator.");
+        System.out.println("29 for Checking Integer or not");
         System.out.println("50 for Rock Paper Scissor Game");
         System.out.print("Enter your choice : ");
         int process = input.nextInt();
@@ -153,6 +154,10 @@ public class Practice4 {
 
         else if(process == 28) {
             month_day();
+        }
+
+        else if(process == 29) {
+            int_num();
         }
 
         else if(process == 50) {
@@ -1309,6 +1314,12 @@ public class Practice4 {
         }
 
         System.out.print(month_name + " " + year + " has " + no_of_day + " days\n");
+    }
+
+    static void int_num() {
+        System.out.println("Enter a number : ");
+        Scanner sc = new Scanner(System.in);
+        System.out.println(sc.hasNextInt());
     }
 
     static void rock_paper_game() {
