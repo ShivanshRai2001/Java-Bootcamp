@@ -1,7 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
 
-
 public class Practice4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
