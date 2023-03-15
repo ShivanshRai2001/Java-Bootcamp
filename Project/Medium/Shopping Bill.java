@@ -76,4 +76,5 @@ public class Practice4 {
     //         System.out.println(i + " \t\t " +  + " \t\t ");
     //     }
     // }
+    
 }
