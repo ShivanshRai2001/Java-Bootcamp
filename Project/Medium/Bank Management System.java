@@ -1,4 +1,5 @@
 // https://favtutor.com/blogs/java-projects-for-beginners
+
 import java.util.Scanner;
 
 public class Practice2 {
